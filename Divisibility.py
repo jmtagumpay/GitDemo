@@ -9,6 +9,8 @@ def step_impl(context):
     print(context.addBook_response.json())
     response_json = context.addBook_response.json()
     print(type(response_json))
-    bookId = response_json['ID']
+    print(response_json)
+    bookId = response_json["ID"]
+    print(type(bookId))
     print(bookId)
-    assert response_json['Msg'] == "successfully added"
+    assert response_json["Msg"] == "successfully added"
